@@ -1,0 +1,20 @@
+{
+  "name": "breath_now",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Woo Yun <hh747hh@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5"
+  }
+}
