@@ -17,6 +17,12 @@ app.get("/api/teachers", function(req, res){
   });
 });
 
+app.get("/api/teachers/:name", function(req, res){
+  Product.findOne(req.params).then(function(teacher){
+    res.json(teacher);
+  });
+});
+
 app.post("/api/teachers", function(req, res){
   Teacher.create(req.body).then(function(teacher){
     res.json(teacher);

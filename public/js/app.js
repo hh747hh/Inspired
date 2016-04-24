@@ -32,24 +32,25 @@
 
   teacherFactory.$inject = ["$resource"];
   function teacherFactory($resource){
-    var Teacher = $resource("/api/teachers");
+    var Teacher = $resource("/api/teachers/:name");
     return Teacher;
   }
   teachersIndexCtrl.$inject = ["Teacher"];
   function teachersIndexCtrl(Teacher){
-    var vm = this;
+    var vm      = this;
     vm.teachers = Teacher.query();
     vm.create   = function(){
-      console.log(vm.newTeacher);
       Teacher.save(vm.newTeacher, function(response){
         vm.teachers.push(response);
       });
     }
   }
-  teachersShowCtrl.$inject = ["$stateParams"];
-  function teachersShowCtrl($stateParams){
+
+  teachersShowCtrl.$inject = ["$stateParams", "Teacher"];
+  function teachersShowCtrl($stateParams, Teacher){
     var vm = this;
-    vm.teacher = $stateParams;
+    vm.teacher = Teacher.get($stateParams);
+
   }
 
 })();

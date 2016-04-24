@@ -1,1 +1,7 @@
-<h2>Showing  {{teachersShowVM.teacher.name}} </h2>
+
+<div data-ng-if="teachersShowVM.teacher.name">
+  <h2>This is {{teachersShowVM.teacher.name}}</h2>
+</div>
+<div data-ng-if="!teachersShowVM.teacher.name">
+  <h2>This teacher does not exist!</h2>
+</div>
