@@ -19,5 +19,6 @@
       url:   "/test",
       template: "<h2>This also works</h2>"
     });
+    $urlRouterProvider.otherwise("/");
   }
 })();
