@@ -32,30 +32,37 @@
 
   teacherFactory.$inject = ["$resource"];
   function teacherFactory($resource){
-    var Teacher = $resource("/api/teachers/:name");
-    return Teacher;
+    var Teacher = $resource("/api/teachers/:name", {}, {update: {method: "PATCH"}
+  });
+  return Teacher;
+}
+
+teachersIndexCtrl.$inject = ["Teacher"];
+function teachersIndexCtrl(Teacher){
+  var vm      = this;
+  vm.teachers = Teacher.query();
+  vm.create   = function(){
+    Teacher.save(vm.newTeacher, function(response){
+      vm.teachers.push(response);
+    });
   }
-  teachersIndexCtrl.$inject = ["Teacher"];
-  function teachersIndexCtrl(Teacher){
-    var vm      = this;
-    vm.teachers = Teacher.query();
-    vm.create   = function(){
-      Teacher.save(vm.newTeacher, function(response){
-        vm.teachers.push(response);
-      });
-    }
+}
+
+teachersShowCtrl.$inject = ["$stateParams", "Teacher","$state"];
+function teachersShowCtrl($stateParams, Teacher, $state){
+  var vm = this;
+  vm.teacher = Teacher.get($stateParams);
+  vm.delete  = function(){
+    Teacher.remove($stateParams, function(){
+      $state.go("teachersIndex");
+    });
+  }
+  vm.update  = function(){
+    Teacher.update($stateParams, vm.teacher, function(response){
+      $state.go("teachersShow", response);
+    });
   }
 
-  teachersShowCtrl.$inject = ["$stateParams", "Teacher","$state"];
-  function teachersShowCtrl($stateParams, Teacher, $state){
-    var vm = this;
-    vm.teacher = Teacher.get($stateParams);
-    vm.delete  = function(){
-      Teacher.remove($stateParams, function(){
-        $state.go("teachersIndex");
-      });
-    }
-
-  }
+}
 
 })();

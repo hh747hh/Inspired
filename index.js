@@ -29,6 +29,11 @@ app.delete("/api/teachers/:name", function(req, res){
   });
 });
 
+app.patch("/api/teachers/:name", function(req, res){
+  Teacher.findOneAndUpdate(req.params, req.body, {new: true}).then(function(product){
+    res.json(teacher);
+  });
+});
 
 app.post("/api/teachers", function(req, res){
   Teacher.create(req.body).then(function(teacher){
