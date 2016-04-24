@@ -46,10 +46,15 @@
     }
   }
 
-  teachersShowCtrl.$inject = ["$stateParams", "Teacher"];
-  function teachersShowCtrl($stateParams, Teacher){
+  teachersShowCtrl.$inject = ["$stateParams", "Teacher","$state"];
+  function teachersShowCtrl($stateParams, Teacher, $state){
     var vm = this;
     vm.teacher = Teacher.get($stateParams);
+    vm.delete  = function(){
+      Teacher.remove($stateParams, function(){
+        $state.go("teachersIndex");
+      });
+    }
 
   }
 

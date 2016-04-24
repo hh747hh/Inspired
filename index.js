@@ -23,6 +23,13 @@ app.get("/api/teachers/:name", function(req, res){
   });
 });
 
+app.delete("/api/teachers/:name", function(req, res){
+  Teacher.findOneAndRemove(req.params).then(function(){
+    res.json({success: true});
+  });
+});
+
+
 app.post("/api/teachers", function(req, res){
   Teacher.create(req.body).then(function(teacher){
     res.json(teacher);

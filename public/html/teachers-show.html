@@ -1,6 +1,7 @@
 
 <div data-ng-if="teachersShowVM.teacher.name">
   <h2>This is {{teachersShowVM.teacher.name}}</h2>
+  <button type="button" data-ng-click="teachersShowVM.delete()">Delete</button>
 </div>
 <div data-ng-if="!teachersShowVM.teacher.name">
   <h2>This teacher does not exist!</h2>

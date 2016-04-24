@@ -2,7 +2,7 @@
 
 <ul>
   <li data-ng-repeat="teacher in teachersIndexVM.teachers">
-    <a data-ui-sref ="teachersShow">{{teacher.name}}</a>
+    <a data-ui-sref ="teachersShow(teacher)">{{teacher.name}}</a>
   </li>
 </ul>
 
