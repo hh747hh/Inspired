@@ -3,9 +3,11 @@
 (function(){
   angular
   .module("breatheNow", [
-    "ui.router"
+    "ui.router",
+    "ngResource"
   ])
   .config(Router)
+  .factory("Teacher", teacherFactory)
   .controller("teachersIndexController", teachersIndexCtrl)
   .controller("teachersShowController", teachersShowCtrl);
 
@@ -28,13 +30,15 @@
     $urlRouterProvider.otherwise("/");
   }
 
-  function teachersIndexCtrl(){
+  teacherFactory.$inject = ["$resource"];
+  function teacherFactory($resource){
+    var Teacher = $resource("/api/teachers");
+    return Teacher;
+  }
+  teachersIndexCtrl.$inject = ["Teacher"];
+  function teachersIndexCtrl(Teacher){
     var vm = this;
-    vm.teachers = [
-    {name : "Dalai Lama"},
-    {name : "Tick Nat Hahn"},
-    {name : "Tara Brach"}
-  ];
+    vm.teachers = Teacher.query();
 }
   teachersShowCtrl.$inject = ["$stateParams"];
   function teachersShowCtrl($stateParams){
