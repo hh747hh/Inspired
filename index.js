@@ -1,10 +1,12 @@
 var express = require("express");
+var parser = require("body-parser");
 var mongoose = require("./db/connection");
 var app = express();
 
 
 var Teacher = mongoose.model("Teacher");
 
+app.use(parser.json({urlencoded: true}));
 app.use("/", express.static("public"));
 app.use("/", express.static("bower_components"));
 
@@ -12,6 +14,12 @@ app.use("/", express.static("bower_components"));
 app.get("/api/teachers", function(req, res){
   Teacher.find().then(function(teachers){
     res.json(teachers);
+  });
+});
+
+app.post("/api/teachers", function(req, res){
+  Teacher.create(req.body).then(function(teacher){
+    res.json(teacher);
   });
 });
 

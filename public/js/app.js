@@ -39,11 +39,17 @@
   function teachersIndexCtrl(Teacher){
     var vm = this;
     vm.teachers = Teacher.query();
-}
+    vm.create   = function(){
+      console.log(vm.newTeacher);
+      Teacher.save(vm.newTeacher, function(response){
+        vm.teachers.push(response);
+      });
+    }
+  }
   teachersShowCtrl.$inject = ["$stateParams"];
   function teachersShowCtrl($stateParams){
-      var vm = this;
-      vm.teacher = $stateParams;
+    var vm = this;
+    vm.teacher = $stateParams;
   }
 
 })();
