@@ -18,7 +18,7 @@ app.get("/api/teachers", function(req, res){
 });
 
 app.get("/api/teachers/:name", function(req, res){
-  Product.findOne(req.params).then(function(teacher){
+  Teacher.findOne(req.params).then(function(teacher){
     res.json(teacher);
   });
 });
@@ -30,7 +30,7 @@ app.delete("/api/teachers/:name", function(req, res){
 });
 
 app.patch("/api/teachers/:name", function(req, res){
-  Teacher.findOneAndUpdate(req.params, req.body, {new: true}).then(function(product){
+  Teacher.findOneAndUpdate(req.params, req.body, {new: true}).then(function(Teacher){
     res.json(teacher);
   });
 });

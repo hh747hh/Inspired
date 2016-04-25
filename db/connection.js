@@ -1,8 +1,15 @@
 var mongoose  = require("mongoose");
 
 var TeacherSchema = {
-  name:     String
-
+  name:          String,
+  occupation:    String,
+  image_url:     String,
+  title:         String,
+  category:      String,
+  video_url:     String,
+  link_url:      String,
+  description:   String,
+  thoughts:      String
 }
 
 mongoose.model("Teacher", TeacherSchema);

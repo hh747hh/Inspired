@@ -1,5 +1,13 @@
 <h2>Showing{{teachersIndexVM.teachers.length}}</h2>
 
+<section data-ng-controller="teachersIndexController as vm">
+  <div class="search-add">
+    <div class="page-controls search-control">
+      <h3>SEARCH
+        <input type="text" class="form-control search-box" placeholder="search teachers" id="address" data-ng-model="vm.countryCategory" />
+      </h3>
+    </div>
+
 <ul>
   <li data-ng-repeat="teacher in teachersIndexVM.teachers">
     <a data-ui-sref ="teachersShow(teacher)">{{teacher.name}}</a>

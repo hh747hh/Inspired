@@ -48,7 +48,7 @@ function teachersIndexCtrl(Teacher){
   }
 }
 
-teachersShowCtrl.$inject = ["$stateParams", "Teacher","$state"];
+teachersShowCtrl.$inject = ["$stateParams", "Teacher", "$state"];
 function teachersShowCtrl($stateParams, Teacher, $state){
   var vm = this;
   vm.teacher = Teacher.get($stateParams);
