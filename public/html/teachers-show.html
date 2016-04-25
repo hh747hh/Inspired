@@ -5,8 +5,9 @@
   <img src="{{teachersShowVM.teacher.image_url}}"/>
   <h4>{{teachersShowVM.teacher.title}}</h4>
   <h4>{{teachersShowVM.teacher.category}}</h4>
-  <iframe width="420" height="315" src="Yes!" frameborder="0" allowfullscreen></iframe>
-  <a href="{{teachersShowVM.teacher.link_url}}">Link</a>
+  <!-- <iframe width="420" height="315" src="{{teachersShowVM.teacher.video_url
+  }}" frameborder="0" allowfullscreen></iframe>
+  <a href="{{teachersShowVM.teacher.link_url}}">Link</a> -->
   <h4>{{teachersShowVM.teacher.description}}</h4>
   <h4>{{teachersShowVM.teacher.thoughts}}</h4>
 
@@ -19,3 +20,18 @@
 <div data-ng-if="!teachersShowVM.teacher.name">
   <h2>This teacher does not exist!</h2>
 </div> -->
+
+<button class="btn btn-primary" data-ng-click="form=!form">Edit/Delete</button>
+ <div class="form-group" data-ng-show="form">
+   <input type="text" placeholder="Name" data-ng-model="teachersShowVM.teacher.name" class="form-control" />
+   <input type="text" data-ng-model="teachersShowVM.teacher.occupation" placeholder="occupation" class="form-control" />
+   <input type="text" data-ng-model="teachersShowVM.teacher.image_url" placeholder="image_url" class="form-control" />
+   <input type="text" data-ng-model="teachersShowVM.teacher.title" placeholder="occupation" class="form-control" />
+   <input type="text" data-ng-model="teachersShowVM.teacher.category" placeholder="occupation" class="form-control" />
+   <input type="text" data-ng-model="teachersShowVM.teacher.video_url" placeholder="video_url" class="form-control" />
+   <input type="text" data-ng-model="teachersShowVM.teacher.link_url" placeholder="link_url" class="form-control" />
+   <input type="text" data-ng-model="teachersShowVM.teacher.description" placeholder="occupation" class="form-control" />
+   <input type="text" data-ng-model="teachersShowVM.teacher.thoughts" placeholder="occupation" class="form-control" />
+   <button data-ng-click="teachersShowVM.update()" class="btn btn-primary">Update</button>
+   <button data-ng-click="teachersShowVM.delete()" class="btn btn-danger">Delete </button>
+ </div>

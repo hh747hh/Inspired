@@ -1,18 +1,37 @@
-<h2>Showing{{teachersIndexVM.teachers.length}}</h2>
+<h2>There are {{teachersIndexVM.teachers.length}} great teachers you can get inspired by!</h2>
 
-<section data-ng-controller="teachersIndexController as vm">
+<!-- <section data-ng-controller="teachersIndexController as vm">
   <div class="search-add">
     <div class="page-controls search-control">
       <h3>SEARCH
         <input type="text" class="form-control search-box" placeholder="search teachers" id="address" data-ng-model="vm.countryCategory" />
       </h3>
+    </div> -->
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Filter by Teacher Name" data-ng-model="teachersIndexVM.filter_on" />
     </div>
 
 <ul>
   <li data-ng-repeat="teacher in teachersIndexVM.teachers">
-    <a data-ui-sref ="teachersShow(teacher)">{{teacher.name}}</a>
+    <a data-ui-sref ="teachersShow(teacher)"><img src="{{teacher.image_url}}"/></a>
+    <h4>{{teacher.name}}</h4>
   </li>
 </ul>
 
-<input type="text" data-ng-model="teachersIndexVM.newProduct.name" />
-<button type="button" data-ng-click="teachersIndexVM.create()"><Create new teacher></button>
+<!-- <input type="text" data-ng-model="teachersIndexVM.newProduct.name" />
+<button type="button" data-ng-click="teachersIndexVM.create()"><Create new teacher></button> -->
+
+<button data-ng-click="form=!form" class="btn btn-primary">Add a Inspiration</button>
+<div class="form-group" data-ng-show="form">
+  <input type="text" data-ng-model="teachersIndexVM.teacher.name" placeholder="Name" class="form-control"/>
+  <input type="text" data-ng-model="teachersIndexVM.teacher.occupation" placeholder="Occupation" class="form-control"/>
+  <input type="text" data-ng-model="teachersIndexVM.teacher.image_url" placeholder="Image_url" class="form-control"/>
+  <input type="text" data-ng-model="teachersIndexVM.teacher.title" placeholder="Title" class="form-control"/>
+  <input type="text" data-ng-model="teachersIndexVM.teacher.category" placeholder="Category" class="form-control"/>
+  <input type="text" data-ng-model="teachersIndexVM.teacher.video_url" placeholder="Video_url" class="form-control"/>
+  <input type="text" data-ng-model="teachersIndexVM.teacher.link_url" placeholder="Link_url" class="form-control"/>
+  <input type="text" data-ng-model="teachersIndexVM.teacher.description" placeholder="Description" class="form-control"/>
+  <input type="text" data-ng-model="teachersIndexVM.teacher.thoughts" placeholder="Thoughts" class="form-control"/>
+  <button data-ng-click="teachersIndexVM.create()" class="btn btn-primary">Create</button>
+</div>
