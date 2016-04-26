@@ -10,6 +10,7 @@
   <div class ="teacherList" data-ng-repeat="teacher in teachersIndexVM.teachers | filter: teachersIndexVM.filter_on">
     <a data-ui-sref ="teachersShow(teacher)"><img data-ng- src="{{teacher.image_url}}"/></a>
     <h4>{{teacher.name}}</h4>
+    <h4>{{teacher.category}}</h4>
   </div>
 
   <!-- Use 'youtube-video' as an element or attribute. -->
@@ -28,5 +29,4 @@
   <input type="text" data-ng-model="teachersIndexVM.teacher.thoughts" placeholder="Thoughts" class="form-control"/>
   <button data-ng-click="teachersIndexVM.create()" class="btn btn-primary">Create</button>
 </div>
-
 </div>

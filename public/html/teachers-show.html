@@ -8,20 +8,45 @@
   <!-- <iframe width="100%" ng-src="{{teachersShowVM.teacher.video_url}}" frameborder="0 " allowfullscreen></iframe> -->
   <h4>{{teachersShowVM.teacher.description}}</h4>
   <h4>{{teachersShowVM.teacher.thoughts}}</h4>
+</div>
 
 
+  <button class="btn btn-primary" data-ng-click="form=!form">Edit/Delete</button>
+  <div class="form-group" data-ng-show="form">
+    <input type="text" placeholder="Name" data-ng-model="teachersShowVM.teacher.name" class="form-control" />
+    <input type="text" data-ng-model="teachersShowVM.teacher.occupation" placeholder="occupation" class="form-control" />
+    <input type="text" data-ng-model="teachersShowVM.teacher.image_url" placeholder="image_url" class="form-control" />
+    <input type="text" data-ng-model="teachersShowVM.teacher.title" placeholder="occupation" class="form-control" />
+    <input type="text" data-ng-model="teachersShowVM.teacher.category" placeholder="occupation" class="form-control" />
+    <input type="text" data-ng-model="teachersShowVM.teacher.video_url" placeholder="video_url" class="form-control" />
+    <input type="text" data-ng-model="teachersShowVM.teacher.link_url" placeholder="link_url" class="form-control" />
+    <input type="text" data-ng-model="teachersShowVM.teacher.description" placeholder="occupation" class="form-control" />
+    <input type="text" data-ng-model="teachersShowVM.teacher.thoughts" placeholder="occupation" class="form-control" />
+    <button data-ng-click="teachersShowVM.update()" class="btn btn-primary">Update</button>
+    <button data-ng-click="teachersShowVM.delete()" class="btn btn-danger">Delete </button>
+  </div>
 
-<button class="btn btn-primary" data-ng-click="form=!form">Edit/Delete</button>
- <div class="form-group" data-ng-show="form">
-   <input type="text" placeholder="Name" data-ng-model="teachersShowVM.teacher.name" class="form-control" />
-   <input type="text" data-ng-model="teachersShowVM.teacher.occupation" placeholder="occupation" class="form-control" />
-   <input type="text" data-ng-model="teachersShowVM.teacher.image_url" placeholder="image_url" class="form-control" />
-   <input type="text" data-ng-model="teachersShowVM.teacher.title" placeholder="occupation" class="form-control" />
-   <input type="text" data-ng-model="teachersShowVM.teacher.category" placeholder="occupation" class="form-control" />
-   <input type="text" data-ng-model="teachersShowVM.teacher.video_url" placeholder="video_url" class="form-control" />
-   <input type="text" data-ng-model="teachersShowVM.teacher.link_url" placeholder="link_url" class="form-control" />
-   <input type="text" data-ng-model="teachersShowVM.teacher.description" placeholder="occupation" class="form-control" />
-   <input type="text" data-ng-model="teachersShowVM.teacher.thoughts" placeholder="occupation" class="form-control" />
-   <button data-ng-click="teachersShowVM.update()" class="btn btn-primary">Update</button>
-   <button data-ng-click="teachersShowVM.delete()" class="btn btn-danger">Delete </button>
- </div>
+<!-- <script type="text/ng-template" >
+ <div ng-repeat="comment in teacher.comments | orderBy:'-upvotes'">
+    <span class="glyphicon glyphicon-thumbs-up"
+      ng-click="incrementUpvotes(comment)"></span>
+    {{comment.upvotes}} - by {{comment.author}}
+    <span style="font-size:20px; margin-left:10px;">
+      {{comment.body}}
+    </span>
+  </div>
+
+  <form ng-submit="addComment()"
+      style="margin-top:30px;">
+      <h3>Add a new comment</h3>
+
+      <div class="form-group">
+        <input type="text"
+        class="form-control"
+        placeholder="Comment"
+        ng-model="body"></input>
+      </div>
+      <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+
+</script> -->

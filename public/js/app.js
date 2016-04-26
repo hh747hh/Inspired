@@ -6,17 +6,15 @@
     "ui.router",
     "ngResource",
     "youtube-embed"
+
   ])
   .config(Router)
   .factory("Teacher", teacherFactory)
   .controller("teachersIndexController", teachersIndexCtrl)
   .controller("teachersShowController", teachersShowCtrl)
   .controller("aboutController", function($scope){
-    $scope.messege = 'Look! I am an about page.';
   })
-  .controller('MyCtrl', function ($scope) {
-    // have a video id
-    $scope.theBestVideo = 'sMKoNBRZM1M';
+  .controller("contactController", function($scope){
   });
 
   Router.$inject = ["$stateProvider", "$locationProvider", "$urlRouterProvider"];
@@ -39,6 +37,11 @@
       url: "/about",
       templateUrl: "/html/about.html",
       controller: "aboutController"
+    })
+    .state("contact",{
+      url: "/contact",
+      templateUrl: "/html/contact.html",
+      controller: "contactController"
     });
     $urlRouterProvider.otherwise("/");
   }
@@ -66,6 +69,7 @@ function teachersIndexCtrl(Teacher){
     Teacher.save(vm.teacher, function(response){
       vm.teachers.push(response);
     });
+    teachersIndexVM.theBestVideo = 'sMKoNBRZM1M';
   }
 }
 
@@ -83,7 +87,6 @@ function teachersShowCtrl($stateParams, Teacher, $state){
       $state.go("teachersShow", response);
     });
   }
-
 }
 
 })();
