@@ -4,12 +4,20 @@
   angular
   .module("breatheNow", [
     "ui.router",
-    "ngResource"
-    ])
+    "ngResource",
+    "youtube-embed"
+  ])
   .config(Router)
   .factory("Teacher", teacherFactory)
   .controller("teachersIndexController", teachersIndexCtrl)
-  .controller("teachersShowController", teachersShowCtrl);
+  .controller("teachersShowController", teachersShowCtrl)
+  .controller("aboutController", function($scope){
+    $scope.messege = 'Look! I am an about page.';
+  })
+  .controller('MyCtrl', function ($scope) {
+    // have a video id
+    $scope.theBestVideo = 'sMKoNBRZM1M';
+  });
 
   Router.$inject = ["$stateProvider", "$locationProvider", "$urlRouterProvider"];
   function Router($stateProvider, $locationProvider, $urlRouterProvider){
@@ -26,6 +34,11 @@
       templateUrl: "/html/teachers-show.html",
       controller:    "teachersShowController",
       controllerAs: "teachersShowVM"
+    })
+    .state("about", {
+      url: "/about",
+      templateUrl: "/html/about.html",
+      controller: "aboutController"
     });
     $urlRouterProvider.otherwise("/");
   }

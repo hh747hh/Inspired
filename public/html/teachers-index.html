@@ -1,3 +1,4 @@
+<div class="jumbotron text-center">
 <h2>There are {{teachersIndexVM.teachers.length}} great teachers you can get inspired by!</h2>
 
 
@@ -5,17 +6,16 @@
   <input type="text" class="form-control" placeholder="Filter by Teacher Name" data-ng-model="teachersIndexVM.filter_on" />
 </div>
 
-<ul>
-  <li data-ng-repeat="teacher in teachersIndexVM.teachers | filter: teachersIndexVM.filter_on">
+
+  <div class ="teacherList" data-ng-repeat="teacher in teachersIndexVM.teachers | filter: teachersIndexVM.filter_on">
     <a data-ui-sref ="teachersShow(teacher)"><img data-ng- src="{{teacher.image_url}}"/></a>
     <h4>{{teacher.name}}</h4>
-  </li>
-</ul>
+  </div>
 
-<!-- <input type="text" data-ng-model="teachersIndexVM.newProduct.name" />
-<button type="button" data-ng-click="teachersIndexVM.create()"><Create new teacher></button> -->
+  <!-- Use 'youtube-video' as an element or attribute. -->
+  <youtube-video video-id="theBestVideo"></youtube-video>
 
-<button data-ng-click="form=!form" class="btn btn-primary">Add a Inspiration</button>
+<button data-ng-click="form=!form" class="btn-primary">Add a Inspiration</button>
 <div class="form-group" data-ng-show="form">
   <input type="text" data-ng-model="teachersIndexVM.teacher.name" placeholder="Name" class="form-control"/>
   <input type="text" data-ng-model="teachersIndexVM.teacher.occupation" placeholder="Occupation" class="form-control"/>
@@ -27,4 +27,6 @@
   <input type="text" data-ng-model="teachersIndexVM.teacher.description" placeholder="Description" class="form-control"/>
   <input type="text" data-ng-model="teachersIndexVM.teacher.thoughts" placeholder="Thoughts" class="form-control"/>
   <button data-ng-click="teachersIndexVM.create()" class="btn btn-primary">Create</button>
+</div>
+
 </div>
