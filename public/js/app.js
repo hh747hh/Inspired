@@ -13,10 +13,6 @@
   .controller("teachersShowController", teachersShowCtrl)
   .controller("aboutController", function($scope){
     $scope.messege = 'Look! I am an about page.';
-  })
-  .controller('MyCtrl', function ($scope) {
-    // have a video id
-    $scope.theBestVideo = 'sMKoNBRZM1M';
   });
 
   Router.$inject = ["$stateProvider", "$locationProvider", "$urlRouterProvider"];
