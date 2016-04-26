@@ -13,8 +13,6 @@
   .controller("teachersIndexController", teachersIndexCtrl)
   .controller("teachersShowController", teachersShowCtrl)
   .controller("aboutController", function($scope){
-  })
-  .controller("contactController", function($scope){
   });
 
   Router.$inject = ["$stateProvider", "$locationProvider", "$urlRouterProvider"];
