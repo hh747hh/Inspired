@@ -1,5 +1,51 @@
-[{"name":"Ken Robinson","occupation":"Author/Educator","image_url":"https://tedcdnpi-a.akamaihd.net/r/tedcdnpe-a.akamaihd.net/images/ted/1465_254x191.jpg?","title":"Do schools kill creativity?","category":"human-potential","video_url":"www.youtube.com/embed/iG9CE55wbtY","link_url":null,"description":"Are schools killing creativity? What makes a great leader? How can I find happiness? These 20 talks are the ones that you and your fellow TED fans just can't stop sharing.","thoughts":"It was awesome"},
-{"name":"Simon Sinek","occupation":"Leadership Expert","image_url":"https://tedcdnpi-a.akamaihd.net/r/tedcdnpe-a.akamaihd.net/images/ted/168354_254x191.jpg?","title":"How great leaders inspire action","category":"leadership","video_url":"www.youtube.com/embed/qp0HIF3SfI4","link_url":null,"description":"Simon Sinek has a simple but powerful model for inspirational leadership — starting with a golden circle and the question ","thoughts":"It was great"},
-{"name":"Brené Brown","occupation":"Vulnerability Researcher","image_url":"https://tedcdnpi-a.akamaihd.net/r/tedcdnpe-a.akamaihd.net/images/ted/c69b7d14d776425c73414cc7cc4ad52d8ddddf48_254x191.jpg?","title":"The power of vulnerability","category":"sef-confident","video_url":"www.youtube.com/embed/iCvmsMzlF7o","link_url":null,"description":"Brené Brown studies human connection — our ability to empathize, belong, love. In a poignant, funny talk, she shares a deep insight from her research, one that sent her on a personal quest to know herself as well as to understand humanity. A talk to share.","thoughts":"It was fantastic"},
-{"name":"Jill Bolte Taylor","occupation":"Neuroanatomist","image_url":"https://tedcdnpi-a.akamaihd.net/r/tedcdnpe-a.akamaihd.net/images/ted/33831_254x191.jpg?","title":"My stroke of insight","category":"human-potential","video_url":"www.youtube.com/embed/UyyjU8fzEYU","link_url":null,"description":"Jill Bolte Taylor got a research opportunity few brain scientists would wish for: She had a massive stroke, and watched as her brain functions — motion, speech, self-awareness — shut down one by one. An astonishing story.","thoughts":"It was amazing"},
-{"name":"Amy Cuddy","occupation":"Social Psychologist","image_url":"https://tedcdnpi-a.akamaihd.net/r/tedcdnpe-a.akamaihd.net/images/ted/4f8fc6f1e41fa02b5a2c72e2695abb324c2126b5_254x191.jpg?","title":"Your body language shapes who you are","category":"self-confident","video_url":"www.youtube.com/embed/Ks-_Mh1QhMc","link_url":null,"description":"Body language affects how others see us, but it may also change how we see ourselves. Social psychologist Amy Cuddy shows how “power posing” — standing in a posture of confidence, even when we don’t feel confident — can affect testosterone and cortisol levels in the brain, and might even have an impact on our chances for success.","thoughts":"It was cool"}]
+[{
+	"name": "Ken Robinson",
+	"occupation": "Author/Educator",
+	"image_url": "https://tedcdnpi-a.akamaihd.net/r/tedcdnpe-a.akamaihd.net/images/ted/1465_254x191.jpg?",
+	"title": "Do schools kill creativity?",
+	"category": "human-potential",
+	"video_url": "https://www.youtube.com/watch?v=iG9CE55wbtY",
+	"link_url": null,
+	"description": "Are schools killing creativity? What makes a great leader? How can I find happiness? These 20 talks are the ones that you and your fellow TED fans just can't stop sharing.",
+	"thoughts": "It was awesome"
+}, {
+	"name": "Simon Sinek",
+	"occupation": "Leadership Expert",
+	"image_url": "https://tedcdnpi-a.akamaihd.net/r/tedcdnpe-a.akamaihd.net/images/ted/168354_254x191.jpg?",
+	"title": "How great leaders inspire action",
+	"category": "leadership",
+	"video_url": "https://www.youtube.com/watch?v=qp0HIF3SfI4",
+	"link_url": null,
+	"description": "Simon Sinek has a simple but powerful model for inspirational leadership — starting with a golden circle and the question ",
+	"thoughts": "It was great"
+}, {
+	"name": "Brené Brown",
+	"occupation": "Vulnerability Researcher",
+	"image_url": "https://tedcdnpi-a.akamaihd.net/r/tedcdnpe-a.akamaihd.net/images/ted/c69b7d14d776425c73414cc7cc4ad52d8ddddf48_254x191.jpg?",
+	"title": "The power of vulnerability",
+	"category": "sef-confident",
+	"video_url": "https://www.youtube.com/watch?v=iCvmsMzlF7o",
+	"link_url": null,
+	"description": "Brené Brown studies human connection — our ability to empathize, belong, love. In a poignant, funny talk, she shares a deep insight from her research, one that sent her on a personal quest to know herself as well as to understand humanity. A talk to share.",
+	"thoughts": "It was fantastic"
+}, {
+	"name": "Jill Bolte Taylor",
+	"occupation": "Neuroanatomist",
+	"image_url": "https://tedcdnpi-a.akamaihd.net/r/tedcdnpe-a.akamaihd.net/images/ted/33831_254x191.jpg?",
+	"title": "My stroke of insight",
+	"category": "human-potential",
+	"video_url": "https://www.youtube.com/watch?v=UyyjU8fzEYU",
+	"link_url": null,
+	"description": "Jill Bolte Taylor got a research opportunity few brain scientists would wish for: She had a massive stroke, and watched as her brain functions — motion, speech, self-awareness — shut down one by one. An astonishing story.",
+	"thoughts": "It was amazing"
+}, {
+	"name": "Amy Cuddy",
+	"occupation": "Social Psychologist",
+	"image_url": "https://tedcdnpi-a.akamaihd.net/r/tedcdnpe-a.akamaihd.net/images/ted/4f8fc6f1e41fa02b5a2c72e2695abb324c2126b5_254x191.jpg?",
+	"title": "Your body language shapes who you are",
+	"category": "self-confident",
+	"video_url": "https://www.youtube.com/watch?v=Ks-_Mh1QhMc",
+	"link_url": null,
+	"description": "Body language affects how others see us, but it may also change how we see ourselves. Social psychologist Amy Cuddy shows how “power posing” — standing in a posture of confidence, even when we don’t feel confident — can affect testosterone and cortisol levels in the brain, and might even have an impact on our chances for success.",
+	"thoughts": "It was cool"
+}]
