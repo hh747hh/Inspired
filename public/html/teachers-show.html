@@ -5,21 +5,11 @@
   <img src="{{teachersShowVM.teacher.image_url}}"/>
   <h4>{{teachersShowVM.teacher.title}}</h4>
   <h4>{{teachersShowVM.teacher.category}}</h4>
-  <!-- <iframe width="420" height="315" src="{{teachersShowVM.teacher.video_url
-  }}" frameborder="0" allowfullscreen></iframe>
-  <a href="{{teachersShowVM.teacher.link_url}}">Link</a> -->
+  <!-- <iframe width="100%" ng-src="{{teachersShowVM.teacher.video_url}}" frameborder="0 " allowfullscreen></iframe> -->
   <h4>{{teachersShowVM.teacher.description}}</h4>
   <h4>{{teachersShowVM.teacher.thoughts}}</h4>
 
 
-
-  <!-- <input type="text" data-ng-model="teachersShowVM.teacher.name" />
-  <button type="button" data-ng-click="teachersShowVM.update()">Update</button>
-  <button type="button" data-ng-click="teachersShowVM.delete()">Delete</button>
-</div>
-<div data-ng-if="!teachersShowVM.teacher.name">
-  <h2>This teacher does not exist!</h2>
-</div> -->
 
 <button class="btn btn-primary" data-ng-click="form=!form">Edit/Delete</button>
  <div class="form-group" data-ng-show="form">

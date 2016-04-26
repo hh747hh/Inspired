@@ -5,7 +5,7 @@
   .module("breatheNow", [
     "ui.router",
     "ngResource"
-  ])
+    ])
   .config(Router)
   .factory("Teacher", teacherFactory)
   .controller("teachersIndexController", teachersIndexCtrl)
@@ -34,6 +34,14 @@
   function teacherFactory($resource){
     var Teacher = $resource("/api/teachers/:name", {}, {update: {method: "PATCH"}
   });
+  Teacher.all = Teacher.query();
+  Teacher.find = function(property, value, callback){
+    Teacher.all.$promise.then(function(){
+      Teacher.all.forEach(function(teacher){
+        if(Teacher[property] == value) callback(teacher);
+      });
+    });
+  };
   return Teacher;
 }
 
@@ -42,7 +50,7 @@ function teachersIndexCtrl(Teacher){
   var vm      = this;
   vm.teachers = Teacher.query();
   vm.create   = function(){
-    Teacher.save(vm.newTeacher, function(response){
+    Teacher.save(vm.teacher, function(response){
       vm.teachers.push(response);
     });
   }

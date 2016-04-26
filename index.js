@@ -19,7 +19,7 @@ app.get("/api/teachers", function(req, res){
 
 app.post("/api/teachers", function(req, res){
   console.log(req.body);
-  Teacher.create(req.body.teacher).then(function(teacher){
+  Teacher.create(req.body).then(function(teacher){
     res.json(teacher);
   });
 });
