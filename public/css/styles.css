@@ -7,7 +7,7 @@ text-align: center;
 
 font-style: italic;
 margin: auto;
-
+line-height: 1.5em;
 }
 
 .imagepage{
@@ -32,30 +32,30 @@ margin: auto;
 }
 
 .showPageBox{
-  background-color: #fff;
-  height: 300PX;
+  height: 200px;
 }
 
-.showPageBox2, {
-  float: left;
-  width: 300px;
-  height: 300px;
-  border: 1px black solid;
-
-}
 
 .showPageBox1{
   width: 300px;
-  height: 300px;
+  height: 200px;
   float: left;
-  text-align: center;
-  border: 1px black solid;
-
 }
+
+.showPageBox2, {
+  margin-top: 50px
+  float: left;
+  width: 300px;
+  height: 200px;
+  border: 1px black solid;
+}
+
 
 .showpageContent{
   width: 500px;
   text-align: center;
+  margin: 0 auto;
+
 
 
 }
