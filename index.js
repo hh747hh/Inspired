@@ -44,7 +44,7 @@ app.patch("/api/teachers/:name", function(req, res){
 
 
 app.get("/*", function(req,res){
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile(__dirname + "/public/layout.html");
 });
 
 

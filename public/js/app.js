@@ -19,8 +19,12 @@
   function Router($stateProvider, $locationProvider, $urlRouterProvider){
     $locationProvider.html5Mode(true);
     $stateProvider
-    .state("teachersIndex", {
+    .state("index", {
       url:           "/",
+      templateUrl:   "/html/index.html",
+    })
+    .state("teachersIndex", {
+      url:           "/teachers",
       templateUrl:   "/html/teachers-index.html",
       controller:    "teachersIndexController",
       controllerAs:  "teachersIndexVM"

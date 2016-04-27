@@ -1,7 +1,97 @@
-body{
 
-  font-family: "helvetica";
+body {
+
+padding-top: 0;
+background-color: #E5FFE5;
+text-align: center;
+
+font-style: italic;
+margin: auto;
+
+}
+
+.imagepage{
+  background-image: url('/images/mountain.jpg'); background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  margin-top: -30px;
+}
+
+.navbar{
+  background: #fff;
+  min-height: 85px;
+  text-transform: uppercase;
+  border-bottom: #ccc solid 1px;
+  padding-top: 15px;
+  text-align: center;
+
+}
+
+.navbar-brand{
+  padding: 0;
+}
+
+.showPageBox{
+  background-color: #fff;
+  height: 300PX;
+}
+
+.showPageBox2, {
+  float: left;
+  width: 300px;
+  height: 300px;
+  border: 1px black solid;
+
+}
+
+.showPageBox1{
+  width: 300px;
+  height: 300px;
+  float: left;
+  text-align: center;
+  border: 1px black solid;
+
+}
+
+.showpageContent{
+  width: 500px;
+  text-align: center;
+
+
+}
+
+#container{
+  width:80%;
+  margin: 10px;
+  overflow: auto;
+}
+
+p{margin:10px 0;
+  font-size: 10px;
+line-height: 1.5em;}
+
+h1{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h2{
+font-size: 25px;
+font-weight: bold;
+}
+
+h3{
   font-size: 20px;
+}
+
+
+h4{
+  font-size: 20px;
+
+}
+
+.clearfix{
+  clear: both;
 }
 
 .teacherList{
@@ -11,12 +101,71 @@ body{
 }
 
 
+.form-group{
+  padding: 10px;
+  border: 4px solid #4ea0d8;
+  border-radius: 10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius: 10px;
+  overflow: auto;
+  background: #f4f4f4;
+  display: block;
+}
 
+.form-group label {
+  display:inline-block;
+  width: 100px;
+  font-weight: bold;
+}
 
 .form-group, .form-control {
   width: 80%;
   margin: 1em auto; }
 
-.btn-primary{
-  clear :both;
+  .btn-primary{
+    clear :both;
+  }
+
+.teacherBox{
+width: 300px;
+
+padding: 10px
+border-radius: 10px;
+display: block;
+background: #f4f4f4;
+display: block;
+}
+
+.teacherImage{
+border-radius: 10px;
+display: block;
+}
+
+@media(max-width: 960px){
+  container{
+    width: 90%;
+  }
+
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }

@@ -1,15 +1,29 @@
+<div class="mainindex">
 
-<div data-ng-if="teachersShowVM.teacher.name">
-  <h2>{{teachersShowVM.teacher.name}}</h2>
-  <h4>{{teachersShowVM.teacher.occupation}}</h4>
-  <img src="{{teachersShowVM.teacher.image_url}}"/>
-  <h4>{{teachersShowVM.teacher.title}}</h4>
-  <h4>{{teachersShowVM.teacher.category}}</h4>
-  <youtube-video video-url="teachersShowVM.teacher.video_url"></youtube-video>
-  <h4>{{teachersShowVM.teacher.description}}</h4>
-  <h4>{{teachersShowVM.teacher.thoughts}}</h4>
+  <div data-ng-if="teachersShowVM.teacher.name">
+    <div class="showPageBox">
+      <div class="showPageBox1">
+        <img src="{{teachersShowVM.teacher.image_url}}"/>
+      </div>
+      <div class="showPageBox2">
+        <h2>{{teachersShowVM.teacher.name}}</h2>
+        <h4>{{teachersShowVM.teacher.occupation}}</h4>
+        <h4><a href="{{teachersShowVM.teacher.link_url}}"><i class="fa fa-link" aria-hidden="true"></i>More info</a></h4>
+        <h4>{{teachersShowVM.teacher.category}}</h4>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="showpageContent">
+      <h4>{{teachersShowVM.teacher.description}}</h4>
+      <h4><strong>What other people said:</strong>{{teachersShowVM.teacher.thoughts}}</h4>
+      <h2>{{teachersShowVM.teacher.title}}</h2>
+    </div>
+      <div class="embed-responsive embed-responsive-16by9">
+      <youtube-video class="embed-responsive-item" video-id="theBestVideo" player-width="'300px'" player-height="'200px'" video-url="teachersShowVM.teacher.video_url"></youtube-video>
+    </div>
 
-</div>
+  </div>
+
 
 
 
@@ -18,37 +32,13 @@
     <input type="text" placeholder="Name" data-ng-model="teachersShowVM.teacher.name" class="form-control" />
     <input type="text" data-ng-model="teachersShowVM.teacher.occupation" placeholder="occupation" class="form-control" />
     <input type="text" data-ng-model="teachersShowVM.teacher.image_url" placeholder="image_url" class="form-control" />
-    <input type="text" data-ng-model="teachersShowVM.teacher.title" placeholder="occupation" class="form-control" />
-    <input type="text" data-ng-model="teachersShowVM.teacher.category" placeholder="occupation" class="form-control" />
+    <input type="text" data-ng-model="teachersShowVM.teacher.title" placeholder="title" class="form-control" />
+    <input type="text" data-ng-model="teachersShowVM.teacher.category" placeholder="category" class="form-control" />
     <input type="text" data-ng-model="teachersShowVM.teacher.video_url" placeholder="video_url" class="form-control" />
     <input type="text" data-ng-model="teachersShowVM.teacher.link_url" placeholder="link_url" class="form-control" />
-    <input type="text" data-ng-model="teachersShowVM.teacher.description" placeholder="occupation" class="form-control" />
-    <input type="text" data-ng-model="teachersShowVM.teacher.thoughts" placeholder="occupation" class="form-control" />
+    <input type="text" data-ng-model="teachersShowVM.teacher.description" placeholder="description" class="form-control" />
+    <input type="text" data-ng-model="teachersShowVM.teacher.thoughts" placeholder="thoughts" class="form-control" />
     <button data-ng-click="teachersShowVM.update()" class="btn btn-primary">Update</button>
     <button data-ng-click="teachersShowVM.delete()" class="btn btn-danger">Delete </button>
   </div>
-
-<!-- <script type="text/ng-template" >
- <div ng-repeat="comment in teacher.comments | orderBy:'-upvotes'">
-    <span class="glyphicon glyphicon-thumbs-up"
-      ng-click="incrementUpvotes(comment)"></span>
-    {{comment.upvotes}} - by {{comment.author}}
-    <span style="font-size:20px; margin-left:10px;">
-      {{comment.body}}
-    </span>
-  </div>
-
-  <form ng-submit="addComment()"
-      style="margin-top:30px;">
-      <h3>Add a new comment</h3>
-
-      <div class="form-group">
-        <input type="text"
-        class="form-control"
-        placeholder="Comment"
-        ng-model="body"></input>
-      </div>
-      <button type="submit" class="btn btn-primary">Post</button>
-    </form>
-
-</script> -->
+</div>
