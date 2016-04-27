@@ -24,30 +24,40 @@ line-height: 1.5em;
   border-bottom: #ccc solid 1px;
   padding-top: 15px;
   text-align: center;
+  position: relative;
 
 }
 
 .navbar-brand{
   padding: 0;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px !important;
+  display: block;
 }
+
 
 .showPageBox{
   height: 200px;
+  width: 100%;
+  background-color: lightgreen;
+  margin-top: -30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 .showPageBox1{
-  width: 300px;
+  width: 500px;
   height: 200px;
   float: left;
 }
 
-.showPageBox2, {
-  margin-top: 50px
+.showPageBox2{
+
   float: left;
-  width: 300px;
+  width: 500px;
   height: 200px;
-  border: 1px black solid;
 }
 
 
