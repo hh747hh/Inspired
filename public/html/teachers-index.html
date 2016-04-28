@@ -1,5 +1,5 @@
 <div class="mainindex">
-  <h2>There are {{teachersIndexVM.teachers.length}} great teachers you can get inspired by!</h2>
+  <h2>Everyday visionaries sharing their enlightenment...</h2>
 
   <h4>Search your Inspiration</h4>
   <div class="search-form">
@@ -8,11 +8,12 @@
 
 
   <div class ="teacherList" data-ng-repeat="teacher in teachersIndexVM.teachers | filter: teachersIndexVM.filter_on">
-    <div class="teacherBox">
+    <div class="teacherBox"><a data-ui-sref ="teachersShow(teacher)">
     <div class="teacherImage"
     <a data-ui-sref ="teachersShow(teacher)"><img data-ng- src="{{teacher.image_url}}"/></a></div>
     <h4>{{teacher.name}}</h4>
     <h4>{{teacher.category}}</h4>
+  </a>
   </div>
 </div>
 

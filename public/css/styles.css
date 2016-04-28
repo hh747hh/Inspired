@@ -4,17 +4,53 @@ body {
 padding-top: 0;
 background-color: #E5FFE5;
 text-align: center;
-
 font-style: italic;
 margin: auto;
 line-height: 1.5em;
 }
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.aboutIntro {
+  font-family: helvetica;
+  font-weight:100;
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding: 2rem;
+  width: 50%;
+  height: 50%;
+  height: 70%;
+  margin:2rem;
+  float: left;
+  font-size: 1.2rem;
+}
+
+.stopfade {
+   opacity: .5;
+}
+
+
+
 
 .imagepage{
   background-image: url('/images/mountain.jpg'); background-repeat: no-repeat;
   background-size: 100%;
   height: 100vh;
   margin-top: -30px;
+  text-align: center;
 }
 
 .navbar{
@@ -36,27 +72,44 @@ line-height: 1.5em;
   display: block;
 }
 
+#inspiration_button {
+  position: absolute;
+  margin-top: 300px;
+
+
+}
+
+.teacherBox{
+  padding-top: 10px;
+  border-radius: 10px;
+  background-color: #CCFFCC
+  display: block;
+  border-radius: 10px;
+
+}
 
 .showPageBox{
   height: 200px;
   width: 100%;
-  background-color: lightgreen;
+  background-color: #66FF66;
   margin-top: -30px;
   margin-left: auto;
   margin-right: auto;
+  display: block;
+  border-radius: 10px;
 }
 
 
 .showPageBox1{
-  width: 500px;
+  width: 300px;
   height: 200px;
   float: left;
 }
 
 .showPageBox2{
-
+  padding-left: 40px;
   float: left;
-  width: 500px;
+  width: 300px;
   height: 200px;
 }
 
@@ -152,11 +205,23 @@ display: block;
 }
 
 @media(max-width: 960px){
-  container{
+  .container{
     width: 90%;
+  }
+  .showPageBox{
+    height: 400px;
   }
 
 }
+
+@media screen and (max-width: 500px) {
+  div{width:70%;}
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+
 
 .embed-responsive {
   position: relative;
@@ -178,4 +243,10 @@ display: block;
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.main-footer{
+  margin: 10px;
+  border-top: 1px #ddd solid;
+  padding-bottom: 10px;
 }
