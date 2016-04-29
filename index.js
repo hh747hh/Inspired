@@ -49,6 +49,7 @@ passport.use(new Strategy(
 
   var app = express();
 
+  app.set("port", process.env.PORT || 3000)
   app.set('public', __dirname + '/public');
 
 
@@ -146,7 +147,6 @@ passport.use(new Strategy(
   });
 
 
-
-  app.listen(3000, function(){
+  app.listen(app.get("port"), function(){
     console.log("It works");
   });
