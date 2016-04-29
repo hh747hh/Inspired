@@ -40,6 +40,7 @@ video {
 
 h5{
   font-size: 3em;
+  margin-top: 300px;
 }
 
 .dontgiveup{
@@ -47,19 +48,11 @@ h5{
   color: white;
   width: 50%;
   height: 50%;
-  margin-top: 300px;
+  margin-top: 30%;
   margin:auto;
   position: relative;;
   text-align: center;
   float: right;
-
-}
-.dontgiveup h1{
-  font-size: 30px;
-}
-
-.stopfade {
-  opacity: .5;
 }
 
 .imagepage{
@@ -91,13 +84,10 @@ h5{
 }
 
 
-
-
 #dontgiveup.animate{
   -moz-transform: translate(-40em, 0);
   -webkit-transform:translate(-40em, 0);
   transform: translate(-40em, 0);
-
 }
 
 
@@ -138,19 +128,23 @@ text-align: center;
 
 }
 
+
 .teacherBox{
-  padding-top: 10px;
+  padding: 10px;
   border-radius: 10px;
-  background: blue;
+  background-color: #CCFFCC;
   display: block;
   border-radius: 10px;
   overflow: auto;
+  width: 300px;
+  box-shadow: 10px 10px 5px #007f00
+
 }
 
 .showPageBox{
   height: 200px;
   width: 100%;
-  background-color: #66FF66;
+  background-color: #B2FFB2;
   margin-top: -30px;
   margin-left: auto;
   margin-right: auto;
@@ -248,15 +242,6 @@ p{margin:10px 0;
       clear :both;
     }
 
-    .teacherBox{
-      width: 300px;
-
-      padding: 10px
-      border-radius: 10px;
-      display: block;
-      background: #f4f4f4;
-      display: block;
-    }
 
     .teacherImage{
       border-radius: 10px;
@@ -271,6 +256,16 @@ p{margin:10px 0;
         height: 400px;
       }
       .div{width:70%;}
+
+    h1{font-size: 20px;}
+    h2{font-size: 17px;}
+    h3{font-size: 15px;}
+    h4{font-size: 15px;}
+    h5{font-size: 20px;}
+    .showpageContent{
+      overflow: scroll;
+    }
+
     }
 
     }
@@ -297,11 +292,6 @@ p{margin:10px 0;
       border: 0;
     }
 
-    .main-footer{
-      margin: 10px;
-      border-top: 1px #ddd solid;
-      padding-bottom: 10px;
-    }
 
     td a {
       padding-left: : 3em;
