@@ -47,11 +47,11 @@ h5{
   color: white;
   width: 50%;
   height: 50%;
-  margin-top: 20%;
+  margin-top: 300px;
   margin:auto;
   position: relative;;
   text-align: center;
-
+  float: right;
 
 }
 .dontgiveup h1{
