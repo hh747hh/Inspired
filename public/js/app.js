@@ -24,7 +24,9 @@
     $stateProvider
     .state("index", {
       url:           "/",
-      templateUrl:   "/html/index.html",
+      templateUrl:   "/html/teachers-index.html",
+      controller:    "teachersIndexController",
+      controllerAs:  "teachersIndexVM"
     })
     .state("teachersIndex", {
       url:           "/teachers",

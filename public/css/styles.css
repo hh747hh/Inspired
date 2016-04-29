@@ -1,48 +1,104 @@
 
 body {
 
-padding-top: 0;
-background-color: #E5FFE5;
-text-align: center;
-font-style: italic;
-margin: auto;
-line-height: 1.5em;
+  padding-top: 0;
+  background-color: #E5FFE5;
+  text-align: center;
+  font-style: 'Lato',sans-serif;
+  margin: auto;
+  line-height: 1.5em;
 }
 
 video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
- background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('/images/mountain.jpg') no-repeat;
   background-size: cover;
-  transition: 1s opacity;
+  transition: 1s ;
+  opacity 0.5 ;
 }
 
+
 .aboutIntro {
-  font-family: helvetica;
   font-weight:100;
   background: rgba(0,0,0,0.3);
   color: white;
   padding: 2rem;
   width: 50%;
   height: 50%;
-  height: 70%;
+  height: 50%;
   margin:2rem;
-  float: left;
   font-size: 1.2rem;
 }
 
+h5{
+  font-size: 3em;
+}
+
+.dontgiveup{
+
+  color: white;
+  width: 50%;
+  height: 50%;
+  margin-top: 20%;
+  margin:auto;
+  position: relative;;
+  text-align: center;
+
+
+}
+.dontgiveup h1{
+  font-size: 30px;
+}
+
 .stopfade {
-   opacity: .5;
+  opacity: .5;
+}
+
+.imagepage{
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate{
+
+  -moz-transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 
+
+
+#dontgiveup.animate{
+  -moz-transform: translate(-40em, 0);
+  -webkit-transform:translate(-40em, 0);
+  transform: translate(-40em, 0);
+
+}
 
 
 .imagepage{
@@ -51,13 +107,13 @@ video {
   height: 100vh;
   margin-top: -30px;
   text-align: center;
+  animation: pulse 5s
 }
 
 .navbar{
   background: #fff;
   min-height: 85px;
   text-transform: uppercase;
-  border-bottom: #ccc solid 1px;
   padding-top: 15px;
   text-align: center;
   position: relative;
@@ -74,18 +130,21 @@ video {
 
 #inspiration_button {
   position: absolute;
-  margin-top: 300px;
+  margin-top: 100px;
+}
 
+.mainindex{
+text-align: center;
 
 }
 
 .teacherBox{
   padding-top: 10px;
   border-radius: 10px;
-  background-color: #CCFFCC
+  background: blue;
   display: block;
   border-radius: 10px;
-
+  overflow: auto;
 }
 
 .showPageBox{
@@ -131,122 +190,119 @@ video {
 
 p{margin:10px 0;
   font-size: 10px;
-line-height: 1.5em;}
+  line-height: 1.5em;}
 
-h1{
-  font-size: 30px;
-  font-weight: bold;
-}
-
-h2{
-font-size: 25px;
-font-weight: bold;
-}
-
-h3{
-  font-size: 20px;
-}
-
-
-h4{
-  font-size: 20px;
-
-}
-
-.clearfix{
-  clear: both;
-}
-
-.teacherList{
-  float:left;
-  margin:auto;
-  padding: 10px;
-}
-
-
-.form-group{
-  padding: 10px;
-  border: 4px solid #4ea0d8;
-  border-radius: 10px;
-  -webkit-border-radius:10px;
-  -moz-border-radius: 10px;
-  overflow: auto;
-  background: #f4f4f4;
-  display: block;
-}
-
-.form-group label {
-  display:inline-block;
-  width: 100px;
-  font-weight: bold;
-}
-
-.form-group, .form-control {
-  width: 80%;
-  margin: 1em auto; }
-
-  .btn-primary{
-    clear :both;
+  h1{
+    font-size: 30px;
+    font-weight: bold;
   }
 
-.teacherBox{
-width: 300px;
-
-padding: 10px
-border-radius: 10px;
-display: block;
-background: #f4f4f4;
-display: block;
-}
-
-.teacherImage{
-border-radius: 10px;
-display: block;
-}
-
-@media(max-width: 960px){
-  .container{
-    width: 90%;
-  }
-  .showPageBox{
-    height: 400px;
+  h2{
+    font-size: 25px;
+    font-weight: bold;
   }
 
-}
-
-@media screen and (max-width: 500px) {
-  div{width:70%;}
-}
-@media screen and (max-device-width: 800px) {
-  html { background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
-  #bgvid { display: none; }
-}
+  h3{
+    font-size: 20px;
+  }
 
 
-.embed-responsive {
-  position: relative;
-  display: block;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-}
+  h4{
+    font-size: 20px;
 
-.embed-responsive.embed-responsive-16by9 {
-  padding-bottom: 56.25%;
-}
+  }
 
-.embed-responsive-item {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
+  .clearfix{
+    clear: both;
+  }
 
-.main-footer{
-  margin: 10px;
-  border-top: 1px #ddd solid;
-  padding-bottom: 10px;
-}
+  .teacherList{
+    float:left;
+    margin:auto;
+    padding: 10px;
+  }
+
+
+  .form-group{
+    padding: 10px;
+    border: 4px solid #4ea0d8;
+    border-radius: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius: 10px;
+    overflow: auto;
+    background: #f4f4f4;
+    display: block;
+  }
+
+  .form-group label {
+    display:inline-block;
+    width: 100px;
+    font-weight: bold;
+  }
+
+  .form-group, .form-control {
+    width: 80%;
+    margin: 1em auto; }
+
+    .btn-primary{
+      clear :both;
+    }
+
+    .teacherBox{
+      width: 300px;
+
+      padding: 10px
+      border-radius: 10px;
+      display: block;
+      background: #f4f4f4;
+      display: block;
+    }
+
+    .teacherImage{
+      border-radius: 10px;
+      display: block;
+    }
+
+    @media(max-width: 960px){
+      .container{
+        width: 90%;
+      }
+      .showPageBox{
+        height: 400px;
+      }
+      .div{width:70%;}
+    }
+
+    }
+
+    .embed-responsive {
+      position: relative;
+      display: block;
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .embed-responsive.embed-responsive-16by9 {
+      padding-bottom: 56.25%;
+    }
+
+    .embed-responsive-item {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .main-footer{
+      margin: 10px;
+      border-top: 1px #ddd solid;
+      padding-bottom: 10px;
+    }
+
+    td a {
+      padding-left: : 3em;
+    }

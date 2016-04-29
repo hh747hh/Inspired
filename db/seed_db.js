@@ -9,3 +9,9 @@ Teacher.remove().then(function(){
     process.exit();
   });
 });
+
+User.remove({}).then(function(){
+  User.create(seedData).then(function(){
+    process.exit();
+  });
+});
