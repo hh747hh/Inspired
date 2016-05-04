@@ -49,7 +49,7 @@ passport.use(new Strategy(
 
   var app = express();
 
-  app.set("port", process.env.PORT || 3000)
+  app.set("port", process.env.PORT || 3000);
   app.set('public', __dirname + '/public');
 
 
