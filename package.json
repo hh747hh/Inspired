@@ -11,6 +11,7 @@
   "dependencies": {
     "angular-youtube-embed": "^1.2.0",
     "body-parser": "^1.15.0",
+    "connect-ensure-login": "^0.1.1",
     "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
