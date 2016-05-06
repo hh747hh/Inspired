@@ -22,10 +22,10 @@ var UserSchema = {
 
 
 if(process.env.NODE_ENV == "production"){
-  mongoose.connect(process.env.MONGODB_URL); // make sure this says MONGODB NOT MONGOLAB
+  mongoose.connect(process.env.MONGODB_URL);
 }else{
-  mongoose.connect("mongodb://localhost/breatheNow");
-} //heroku attempt
+  mongoose.connect("mongodb://localhost/breathenow");
+}
 
 
 
