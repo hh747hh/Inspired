@@ -22,6 +22,7 @@ var UserSchema = {
 
 
 if(process.env.NODE_ENV == "production"){
+  console.log( process.env.MONGODB_URL);
   mongoose.connect(process.env.MONGODB_URL);
 }else{
   mongoose.connect("mongodb://localhost/breatheNow");
