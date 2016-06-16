@@ -38,21 +38,6 @@ header .navbar-default .navbar-nav a:hover {
   color: green;
 }
 
-/*header .navbar-default .navbar-nav .active a {
-  font-weight: 700;
-  color: #EEC856;
-  background: transparent;
-  border-bottom: 4px solid #EEC856;
-  text-shadow: none;
-}
-
-header .navbar-default .navbar-nav .active a:hover {
-  color: #E15D5F;
-  background: transparent;
-  text-shadow: none;
-}*/
-
-
 
 .carousel-caption {
 	top: 50%;
@@ -87,7 +72,7 @@ header .navbar-default .navbar-nav .active a:hover {
 
 .teacheInfo{
 	padding: 20px 0;
-	background-color: lightgreen;
+	background-color: lightpink;
 }
 
 .videoInfo{
@@ -133,7 +118,6 @@ header .navbar-default .navbar-nav .active a:hover {
 }
 
 .aboutCentent h1,h4{
- color: white;
 }
 
 .contact{
