@@ -23,21 +23,22 @@ header .navbar {
   transition: all .5s ease-out;
 }
 
+
 header .navbar-default {
   background-color: transparent;
   border: none;
 }
 
 header .navbar-default .navbar-nav a {
-  color: darkgreen;
+  color: lightgreen;
   padding: 5px 8px;
 }
 
 header .navbar-default .navbar-nav a:hover {
-  color: #EEC856;
+  color: green;
 }
 
-header .navbar-default .navbar-nav .active a {
+/*header .navbar-default .navbar-nav .active a {
   font-weight: 700;
   color: #EEC856;
   background: transparent;
@@ -49,7 +50,7 @@ header .navbar-default .navbar-nav .active a:hover {
   color: #E15D5F;
   background: transparent;
   text-shadow: none;
-}
+}*/
 
 
 
