@@ -1,33 +1,46 @@
-<div class="mainindex">
 
+<section id="container-fluid">
+  <div class=" teacherShow">
   <div data-ng-if="teachersShowVM.teacher.name">
-    <div class="showPageBox">
-      <div class="showPageBox1">
-        <img src="{{teachersShowVM.teacher.image_url}}"/>
+    <div class="teacheInfo row">
+
+      <div class="col-lg-3">
+        <img class="img-rounded" src="{{teachersShowVM.teacher.image_url}}"/>
       </div>
-      <div class="showPageBox2">
+      <div class="col-lg-9">
         <h2>{{teachersShowVM.teacher.name}}</h2>
         <h4>{{teachersShowVM.teacher.occupation}}</h4>
         <h4><a href="{{teachersShowVM.teacher.link_url}}"><i class="fa fa-link" aria-hidden="true"></i>More info</a></h4>
         <h4>{{teachersShowVM.teacher.category}}</h4>
       </div>
     </div>
-    <div class="clearfix"></div>
-    <div class="showpageContent" align="center">
-      <h4>{{teachersShowVM.teacher.description}}</h4>
-      <h4><strong>What other people said: </strong><br>{{teachersShowVM.teacher.thoughts}}</h4>
+
+    <div class="col-lg-6 embed-responsive embed-responsive-16by9">
+      <youtube-video class="embed-responsive-item " video-url="teachersShowVM.teacher.video_url"></youtube-video>
+    </div>
+
+    <div class="quote col-lg-6">
+      <div class="subject">
       <h2>{{teachersShowVM.teacher.title}}</h2>
     </div>
-      <div class="embed-responsive embed-responsive-16by9">
-      <youtube-video class="embed-responsive-item" video-id="theBestVideo" player-width="'300px'" player-height="'200px'" video-url="teachersShowVM.teacher.video_url"></youtube-video>
+      <div class="discription">
+        <h4>{{teachersShowVM.teacher.description}}</h4>
+      </div>
+      <div class="testimonial">
+      <h4><strong>What media said: </strong></h4>
+      <h4>{{teachersShowVM.teacher.thoughts}}</h4>
     </div>
 
+
   </div>
+</div>
 
 
 
 
-  <button class="btn btn-primary" data-ng-click="form=!form">Edit/Delete</button>
+
+  <button class="btn-primary btn-lg  col-sm-3 col-sm-offset-2 col-md-6 col-md-offset-3" data-ng-click="form=!form">Edit/Delete</button>
+
   <div class="form-group" data-ng-show="form">
     <input type="text" placeholder="Name" data-ng-model="teachersShowVM.teacher.name" class="form-control" />
     <input type="text" data-ng-model="teachersShowVM.teacher.occupation" placeholder="occupation" class="form-control" />
@@ -41,4 +54,5 @@
     <button data-ng-click="teachersShowVM.update()" class="btn btn-primary">Update</button>
     <button data-ng-click="teachersShowVM.delete()" class="btn btn-danger">Delete </button>
   </div>
-</div>
+
+</section>

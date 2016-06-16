@@ -8,7 +8,6 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
 
   <link rel="stylesheet" href="/css/styles.css" />
@@ -26,39 +25,32 @@
 
 <body >
 
-  <header>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="img-responsive" href="/"><img src="/images/inspired.jpg" /></a>
-        </div>
 
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/login" target="_top">SignIn</a></li>
-          <li><a href="/login">SignUp</a></li>
-          <li><a href="/teachers">Inspirations</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </div>
-      </nav>
-    </header>
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><h2>Inspired</h2></a>
+    </div><!-- navbar-header -->
+    <div class="collapse navbar-collapse" id="collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="/teachers">Inspirations</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div><!-- collapse navbar-collapse -->
+  </div><!-- container -->
+</nav>
+
+ </header>
 
 
   <div data-ui-view></div>
-  <div class="clearfix"></div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
-  <script>
-    $(document).ready(function(){
-      $('.dontgiveup').addClass('animate');
-      $(window).scroll(function(){
-        var y = $(this).scrollTop();
-
-
-      })
-    })
-  </script>
 </body>
-
 </html>

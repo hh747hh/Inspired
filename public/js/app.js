@@ -96,4 +96,6 @@ function teachersShowCtrl($stateParams, Teacher, $state){
   }
 }
 
+
+
 })();
