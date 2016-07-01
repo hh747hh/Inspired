@@ -47,7 +47,10 @@ header .navbar-default .navbar-nav a:hover {
 	top: 50%;
 	transform: translateY(-50%);
 
+
 }
+
+
 
 .teacherBox:hover{
 	background-color: #E6F3F7;
@@ -76,7 +79,7 @@ header .navbar-default .navbar-nav a:hover {
 
 .teacheInfo{
 	padding: 20px 0;
-	background-color: lightpink;
+	background-color: lightblue;
 }
 
 .videoInfo{
@@ -121,9 +124,9 @@ header .navbar-default .navbar-nav a:hover {
 
 }
 
-.aboutCentent h1,h4{
+/*.aboutCentent h1,h4{
 	color: white;
-}
+}*/
 
 .contact{
 	padding-top: 100px;
